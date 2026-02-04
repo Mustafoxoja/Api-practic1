@@ -11,6 +11,7 @@ import Todolist from "./todo";
 import ApiConnect from "./assets/constract/apiConnect";
 import DetailPage from "./assets/constract/detaill";
 import AdvancedApi from "./assets/constract/advancedApi";
+import PostsComp from "./assets/constract/postsApi";
 
 const RouterComp = () => {
   return (
@@ -26,7 +27,8 @@ const RouterComp = () => {
         <Route path="/todo" element={<Todolist />} />{" "}
         <Route path="/api" element={<ApiConnect />} />{" "}
         <Route path="/api/:id" element={<DetailPage />} />{" "}
-        <Route path="/api/advanced" element={<AdvancedApi />} />
+        <Route path="/api/advanced" element={<AdvancedApi />} />{" "}
+        <Route path="/api/posts" element={<PostsComp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

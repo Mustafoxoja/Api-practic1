@@ -4,6 +4,13 @@ import styled from "styled-components";
 
 const ApiConnect = () => {
   const [user, setUser] = useState([]);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((p) => p.json())
+      .then(setPosts);
+  });
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
